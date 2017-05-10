@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small">10dp</dimen>
+    <dimen name="smedium">15dp</dimen>
+    <dimen name="medium">20dp</dimen>
+    <dimen name="icon_medium">30dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="icon">25dp</dimen>
+    <dimen name="imgSize">160dp</dimen>
+    <dimen name="icon1">24dp</dimen>
+    <dimen name="imgdetail">180dp</dimen>
+</resources>

@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Tu viaje</string>
+    <string name="add">Mas</string>
+    <string name="add_activity">Tuviaje</string>
+    <string name="descripcion">Descripción</string>
+    <string name="Ppurace">Parque Nacional Puracé</string>
+    <string name="name">Juan Angel Gutierrez</string>
+    <string name="cell">3217927944</string>
+    <string name="ubica">Parque Nacional Puracé</string>
+    <string name="reservar">Reservar</string>
+    <string name="descripcionPpurace">Un viaje unico</string>
+    <string name="portada">Portada de Parque purace</string>
+    <string name="Iconcell">Icono de Cell</string>
+    <string name="contenido">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu fringilla dui, eu luctus magna. Vivamus id orci bibendum, vulputate nulla vel, molestie nisl. Morbi facilisis mattis orci ac dictum. Fusce congue et mi non dictum. Sed vulputate rutrum nunc, ac convallis felis bibendum in. Nullam felis elit, viverra ac mi a, vulputate mollis tortor. Proin nec egestas velit, sit amet placerat orci. Sed vel libero leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse imperdiet augue et accumsan varius. Mauris id lorem vehicula urna hendrerit finibus.</string>
+    <string name="Iconoperfil">Icono de perfil</string>
+    <string name="detail_phone">Telefono</string>
+    <string name="detail_address">Ubicación</string>
+    <string name="detail_costo">Costo</string>
+    <string name="iconoubicacion">Icono de ubicacion</string>
+    <string name="login_title">Tu Viaje</string>
+    <string name="registro">Registrate</string>
+    <string name="detail_description">Itinerario</string>
+    <string name="entrar">Entrar</string>
+    <string name="usario">Usuario</string>
+    <string name="contraseña">Contraseña</string>
+</resources>
+

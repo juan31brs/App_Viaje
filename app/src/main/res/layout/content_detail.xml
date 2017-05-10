@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+<data>
+
+    <variable
+        name="viaje"
+        type="com.angel.juan.app_tuviaje.models.Viaje"/>
+</data>
+
+<TableLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+
+<RelativeLayout android:padding="@dimen/medium">
+
+    <ImageView
+        android:id="@+id/icon_call"
+        style="@style/IconDetail"
+        android:layout_marginBottom="@dimen/medium"
+        android:src="@drawable/ic_call" />
+
+    <TextView
+        android:id="@+id/label_phone"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/icon_call"
+        android:layout_toRightOf="@id/icon_call"
+        tools:text="3217927944"
+        android:text="@{viaje.telefono}"
+        />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_phone"
+        android:layout_toRightOf="@id/icon_call"
+        android:text="@string/detail_phone" />
+
+    <ImageView
+        android:id="@+id/icon_place"
+        style="@style/IconDetail"
+        android:layout_below="@id/icon_call"
+        android:layout_marginBottom="@dimen/medium"
+        android:src="@drawable/ic_place" />
+
+    <TextView
+        android:id="@+id/label_place"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/icon_place"
+        android:layout_toRightOf="@id/icon_place"
+        tools:text="Calle falsa 123"
+        android:text="@{viaje.direccion}"
+        />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_place"
+        android:layout_toRightOf="@id/icon_place"
+        android:text="@string/detail_address" />
+
+    <ImageView
+        android:id="@+id/icon_star"
+        style="@style/IconDetail"
+        android:layout_below="@id/icon_place"
+        android:src="@drawable/ic_money" />
+
+    <TextView
+        android:id="@+id/label_star"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/icon_star"
+        android:layout_toRightOf="@id/icon_star"
+        tools:text="30.000"
+        android:text='@{viaje.costo}'
+        />
+
+    <TextView
+        style="@style/TextAppearance.AppCompat.Small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/label_star"
+        android:layout_toRightOf="@id/icon_star"
+        android:text="@string/detail_costo" />
+
+
+</RelativeLayout>
+
+    <!--Linea divisora-->
+
+<View
+    android:layout_height="1dp"
+    android:background="@color/divider" />
+
+<TextView
+    style="@style/TextAppearance.AppCompat.Headline"
+    android:layout_marginBottom="@dimen/small"
+    android:paddingLeft="@dimen/medium"
+    android:paddingRight="@dimen/medium"
+    android:paddingTop="@dimen/medium"
+    android:text="@string/detail_description" />
+
+<TextView
+    style="@style/TextAppearance.AppCompat.Body1"
+    android:padding="@dimen/medium"
+    tools:text="@string/contenido"
+    android:text="@{viaje.descripcion}"
+    />
+</TableLayout>
+    </layout>
+
+
+
+
+
