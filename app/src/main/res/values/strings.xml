@@ -19,9 +19,34 @@
     <string name="iconoubicacion">Icono de ubicacion</string>
     <string name="login_title">Tu Viaje</string>
     <string name="registro">Registrate</string>
+    <string name="menu">Menu Principal</string>
+    <string name="menu_conoces">Conocenos</string>
+    <string name="menu_realizados">Viajes Realizados</string>
     <string name="detail_description">Itinerario</string>
     <string name="entrar">Entrar</string>
     <string name="usario">Usuario</string>
     <string name="contraseña">Contraseña</string>
+    <string name="text_elige">Elige tu viaje de Interes</string>
+    <string name="btn_finalizar">FINALIZAR</string>
+    <string name="regis_nacimiento">Fecha de Nacimiento</string>
+    <string name="register_email">Email</string>
+    <string name="register_contra">Contraseña</string>
+    <string name="register_name">Nombre</string>
+    <string name="title_activity_selected">SelectedActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_open">Menu Abierto</string>
+    <string name="menu_close">Menu Cerrado</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="ubicacion">Ubicación</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="nombre">Nombre</string>
+    <string name="fecha">Fecha</string>
+    <string name="save">Guardar</string>
+    <string name="costo">Costo</string>
+    <string name="agregar">Agregar Nueva Reserva</string>
 </resources>
 

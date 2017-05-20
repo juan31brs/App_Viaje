@@ -2,6 +2,7 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
 <data>
@@ -13,8 +14,7 @@
 
 <TableLayout
 android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical">
+android:layout_height="match_parent">
 
 
 <RelativeLayout android:padding="@dimen/medium">
@@ -118,6 +118,38 @@ android:orientation="vertical">
     tools:text="@string/contenido"
     android:text="@{viaje.descripcion}"
     />
+
+    <android.support.constraint.ConstraintLayout>
+
+
+        <Button
+            android:id="@+id/button_ubicacion"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/ubicacion"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/button_reservar"
+            app:layout_constraintTop_toTopOf="@+id/button_reservar"
+            tools:text="@string/ubicacion"
+            />
+
+        <Button
+            android:id="@+id/button_reservar"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/reservar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/button_ubicacion"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="@string/reservar" />
+
+    </android.support.constraint.ConstraintLayout>
+
 </TableLayout>
     </layout>
 

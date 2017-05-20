@@ -69,7 +69,8 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/button3"
             app:layout_constraintTop_toTopOf="@+id/button3"
-            tools:text="@string/registro" />
+            tools:text="@string/registro"
+            android:onClick="@{()-> handler.goToRegister()}"/>
 
         <Button
             android:id="@+id/button3"

@@ -17,3 +17,4 @@ public class Attrs {
         Picasso.with(context).load(uri).into(imageView);
     }
 }
+//mAP activy y en values sale la llave

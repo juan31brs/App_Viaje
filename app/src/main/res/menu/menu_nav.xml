@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_menu_principal"
+        android:title="@string/menu"
+         />
+
+    <item
+        android:id="@+id/nav_viaje"
+        android:icon="@drawable/ic_conocenos"
+        android:title="Nuestros Destinos"/>
+
+
+    <item
+        android:id="@+id/nav_conocenos"
+        android:title="@string/menu_conoces"
+        android:icon="@drawable/ic_conocenos" />
+    <item
+        android:id="@+id/nav_viajes_realizados"
+        android:title="@string/menu_realizados"
+        android:icon="@drawable/ic_viajes_realizados" />
+
+</menu>

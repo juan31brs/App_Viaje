@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="destinos"
+            type="com.angel.juan.app_tuviaje.models.Destino"/>
+
+    </data>
+
+    <!--Es el que realiza la animacion-->
+    <!--Tiene dos hijos el Nested y el AppBarLayout-->
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Me permite colocar dos Scroll Anidados, es el motor-->
+        <!--la ruta que crea la animacion, es app-->
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <!--Importa el contenido de content_detail-->
+            <include layout="@layout/content_detail2"
+                app:destino="@{destinos}"/>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <!--Theme para que cambie de color-->
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <!--el scroll genera el efecto-->
+            <!--Collapsin hace mas grande el toolbar-->
+            <!--exitUntil se colapsatodo menos elactionbar-->
+            <!--contentScrim cuando colapso cambia de color y no queda la imagen-->
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
+                app:title="@{destinos.nombre}"
+                app:contentScrim="@color/colorPrimary">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:imgUrl="@{destinos.imagen}"
+                    app:layout_collapseMode="parallax"/>
+
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    />
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
+

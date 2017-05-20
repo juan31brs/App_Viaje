@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout     xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="reserva"
+            type="com.angel.juan.app_tuviaje.models.Reserva"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/small"
+        >
+
+        <TextView
+            android:id="@+id/nombre"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Nombre "
+            android:text="@{reserva.nombre}"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nombre"
+            android:text="@string/nombre"
+            />
+
+        <TextView
+            android:id="@+id/reserva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{reserva.fecha}'
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reserva"
+            android:text="@string/fecha"
+            />
+
+
+        <TextView
+            android:id="@+id/costo"
+            style="@style/TextAppearance.AppCompat.Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="30.000"
+            android:text='@{reserva.costo}'
+            />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/costo"
+            android:text="@string/detail_costo" />
+
+    </LinearLayout>
+</layout>

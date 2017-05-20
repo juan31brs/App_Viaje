@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="viajes_array">
+        <item>Parque Nacional Natural Puracé</item>
+        <item>Volcán Puracé</item>
+        <item>Fin del Mundo</item>
+        <item>Parapente en Balboa</item>
+        <item>Salento</item>
+        <item>Tierradentro</item>
+    </string-array>
+</resources>
