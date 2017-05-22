@@ -20,6 +20,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ToggleButton;
 
 import com.angel.juan.app_tuviaje.adapter.ViajeAdapter;
@@ -34,6 +35,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, DrawerLayout.DrawerListener {
     //NavigationView.OnNavigationItemSelectedListener//LO COLOQUE DEL MENU
+
 
     ActivityMainBinding binding;
     //ViajeAdapter adapter;

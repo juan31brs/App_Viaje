@@ -49,6 +49,7 @@ public class MainFragment extends Fragment implements ViajeAdapter.OnViajeListen
 
     private void loadData() {
 
+        Data.data.clear();
 
         Viaje r1 = new Viaje();
         r1.setNombre("Parque Nacional Puracé");

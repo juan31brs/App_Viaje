@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    >
-
-    <data>
-        <variable
-            name="handler"
-            type="com.angel.juan.app_tuviaje.LoginActivity"
-            />
-
-    </data>
-
     <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="com.angel.juan.app_tuviaje.LoginActivity">
@@ -59,7 +48,7 @@
             tools:layout_editor_absoluteX="0dp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button_register"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -67,23 +56,21 @@
             android:text="@string/registro"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/button3"
-            app:layout_constraintTop_toTopOf="@+id/button3"
-            tools:text="@string/registro"
-            android:onClick="@{()-> handler.goToRegister()}"/>
+            app:layout_constraintRight_toLeftOf="@+id/button_login"
+            app:layout_constraintTop_toTopOf="@+id/button_login"
+            />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button_login"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:text="@string/entrar"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/button2"
+            app:layout_constraintLeft_toRightOf="@+id/button_register"
             app:layout_constraintRight_toRightOf="parent"
-            tools:text="@string/entrar"
-            android:onClick="@{()-> handler.goToNext()}"/>
+            />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/usuario"
@@ -99,6 +86,7 @@
             android:layout_marginEnd="8dp">
 
             <EditText
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/usario"
@@ -108,7 +96,7 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintBottom_toTopOf="@+id/button_register"
             android:id="@+id/pass"
             app:layout_constraintTop_toBottomOf="@+id/usuario"
             android:layout_marginLeft="8dp"
@@ -127,4 +115,4 @@
         </android.support.design.widget.TextInputLayout>
 
     </android.support.constraint.ConstraintLayout>
-</layout>
+
