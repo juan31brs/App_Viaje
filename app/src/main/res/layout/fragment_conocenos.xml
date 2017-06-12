@@ -1,15 +1,91 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.angel.juan.app_tuviaje.fragment.ConocenosFragment">
 
 
-
 <ImageView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="@dimen/dimenimgconocenos"
+    android:layout_height="@dimen/dimenimgconoceno1"
     android:id="@+id/img1"
-    />
+    android:src="@drawable/logo"
+    android:scaleType="centerCrop"
+    android:layout_marginRight="@dimen/fab_margin"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginBottom="@dimen/marginconocenos"
+    app:layout_constraintBottom_toTopOf="@+id/textView5" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="@dimen/dimentextconocenos"
+        android:text="@string/contenidoconocenos"
+        android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+        android:layout_marginEnd="@dimen/appbar_padding_top"
+        app:layout_constraintRight_toLeftOf="@+id/img1"
+        android:layout_marginRight="@dimen/appbar_padding_top"
+        android:layout_marginLeft="@dimen/appbar_padding_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toTopOf="@+id/img1"
+        android:layout_marginTop="@dimen/appbar_padding_top" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quienes_somos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Notification.Title"
+        android:layout_marginBottom="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/img1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="@dimen/appbar_padding_top"
+        android:layout_marginLeft="@dimen/appbar_padding_top" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/visi_n"
+        android:textAppearance="@style/TextAppearance.AppCompat.Notification.Title"
+        android:layout_marginBottom="@dimen/appbar_padding_top"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        android:layout_marginRight="@dimen/appbar_padding_top"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="@dimen/appbar_padding_top"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:textStyle="italic"
+        android:layout_height="@dimen/tam"
+        android:text="@string/contenidoconocenos2"
+        android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle"
+        android:layout_marginBottom="@dimen/appbar_padding_top"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        android:layout_marginLeft="@dimen/appbar_padding_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="@dimen/appbar_padding_top"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/appbar_padding_top"
+        android:text="@string/nuestra_oficina"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="@dimen/appbar_padding_top"
+        style="@style/Widget.AppCompat.Button.Colored"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="@dimen/appbar_padding_top"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

@@ -52,62 +52,62 @@ public class MainFragment extends Fragment implements ViajeAdapter.OnViajeListen
         Data.data.clear();
 
         Viaje r1 = new Viaje();
-        r1.setNombre("Parque Nacional Puracé");
-        r1.setTelefono("3217927944");
-        r1.setCosto("30.000");
-        r1.setDescripcion(getString(R.string.contenido));
-        r1.setDireccion("Parque Puracé");
+        r1.setNombre(getString(R.string.nombrepurace));
+        r1.setTelefono(getString(R.string.cellparque));
+        r1.setCosto(getString(R.string.costopurace));
+        r1.setDescripcion(getString(R.string.contenidoparque));
+        r1.setDireccion(getString(R.string.direcionpurace));
         r1.setImagen("http://2.bp.blogspot.com/-JIfScqan2l8/VXRWo-XsWLI/AAAAAAAAGwo/nljkjda5Ypk/w1200-h630-p-k-no-nu/AFICHE%2BPARQUE%2BNATURAL%2BDEL%2BPURACE.png");
-        r1.setFecha("20 de Mayo del 2017");
+        r1.setFecha(getString(R.string.fechapurace));
 
         Viaje r2 = new Viaje();
-        r2.setNombre("Volcán Puracé");
-        r2.setTelefono("3217927944");
-        r2.setCosto("30.000");
-        r2.setDescripcion(getString(R.string.contenido));
-        r2.setDireccion("Parque Puracé");
-        r2.setImagen("https://img.absolutviajes.com/wp-content/uploads/2012/05/Purace.jpg");
-        r2.setFecha("10 de Noviembre del 2017");
+        r2.setNombre(getString(R.string.nombrevolcan));
+        r2.setTelefono(getString(R.string.cellparque));
+        r2.setCosto(getString(R.string.costovolcan));
+        r2.setDescripcion(getString(R.string.contenidoparque));
+        r2.setDireccion(getString(R.string.direcionpurace));
+        r2.setImagen(getString(R.string.guiavolcan));
+        r2.setFecha(getString(R.string.fechavolcan));
 
 
         Viaje r3 = new Viaje();
-        r3.setNombre("Tierradentro");
-        r3.setTelefono("3217927944");
-        r3.setCosto("30.000");
-        r3.setDescripcion(getString(R.string.contenido));
-        r3.setDireccion("Inza");
-        r3.setImagen("http://cdn.colombia.com/images/colombia-info/historia-de-colombia/cc-tierradentro.jpg");
-        r3.setFecha("31 de Octubre del 2017");
+        r3.setNombre(getString(R.string.nombretierradentro));
+        r3.setTelefono(getString(R.string.cellcotopaxi));
+        r3.setCosto(getString(R.string.costoazufral));
+        r3.setDescripcion(getString(R.string.contenidoazufral));
+        r3.setDireccion(getString(R.string.direciontierra));
+        r3.setImagen(getString(R.string.tierradentro));
+        r3.setFecha(getString(R.string.fechatierra));
 
 
         Viaje r4 = new Viaje();
-        r4.setNombre("Parapente en Balboa");
-        r4.setTelefono("3217927944");
-        r4.setCosto("30.000");
-        r4.setDescripcion(getString(R.string.contenido));
-        r4.setDireccion("Balboa");
-        r4.setImagen("http://www.barilochexcursiones.com/images/sistema/actividades/galeria/parapente%20copia.jpg");
-        r4.setFecha("10 de Diciembre del 2017");
+        r4.setNombre(getString(R.string.nombrebalboa));
+        r4.setTelefono(getString(R.string.cellcotopaxi));
+        r4.setCosto(getString(R.string.costobalboa));
+        r4.setDescripcion(getString(R.string.contenidonevado));
+        r4.setDireccion(getString(R.string.direcionbalboa));
+        r4.setImagen(getString(R.string.imgbalboa));
+        r4.setFecha(getString(R.string.fechabalboa));
 
 
         Viaje r5 = new Viaje();
-        r5.setNombre("Fin del Mundo");
-        r5.setTelefono("3217927944");
-        r5.setCosto("30.000");
-        r5.setDescripcion(getString(R.string.contenido));
-        r5.setDireccion("Mocoa");
-        r5.setImagen("http://viajesvivex.com/wp-content/uploads/2016/08/cascadas-fin-del-mundo-putumayo-03.jpg");
-        r5.setFecha("10 de Junio del 2017");
+        r5.setNombre(getString(R.string.nombrefin));
+        r5.setTelefono(getString(R.string.cellcotopaxi));
+        r5.setCosto(getString(R.string.costofin));
+        r5.setDescripcion(getString(R.string.contenidonevado));
+        r5.setDireccion(getString(R.string.direccionmocoa));
+        r5.setImagen(getString(R.string.imgfincho));
+        r5.setFecha(getString(R.string.fechafin));
 
 
         Viaje r6 = new Viaje();
-        r6.setNombre("Salento");
-        r6.setTelefono("3217927944");
-        r6.setCosto("30.000");
-        r6.setDescripcion(getString(R.string.contenido));
-        r6.setDireccion("Salento");
-        r6.setImagen("http://www.armeniahotel.com.co/wp-content/uploads/2013/01/14140055773_8f50a48dc3_b.jpg");
-        r6.setFecha("03 de Marzo del 2017");
+        r6.setNombre(getString(R.string.nombresalento));
+        r6.setTelefono(getString(R.string.cellnevado));
+        r6.setCosto(getString(R.string.costosalent));
+        r6.setDescripcion(getString(R.string.contenidocotopaxi));
+        r6.setDireccion(getString(R.string.direcionsalento));
+        r6.setImagen(getString(R.string.imgsalento));
+        r6.setFecha(getString(R.string.fechasalento));
 
         Data.data.add(r1);
         Data.data.add(r2);

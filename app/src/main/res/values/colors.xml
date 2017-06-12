@@ -8,5 +8,6 @@
     <color name="title_login">#ffffff</color>
     <color name="icon2">#ffffff</color>
     <color name="divider">#BDBDBD</color>
+    <color name="background">#333</color>
 </resources>
 

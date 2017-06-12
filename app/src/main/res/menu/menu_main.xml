@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:title="@string/agregar"
-        android:icon="@drawable/ic_place"
+        android:icon="@drawable/ic_more"
         android:id="@+id/action_add"
-        app:showAsAction="withText">
+        app:showAsAction="always">
 
     </item>
 

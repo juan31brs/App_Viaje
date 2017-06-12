@@ -20,7 +20,7 @@
             style="@style/Base.TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="Nombre "
+            tools:text="@string/register_name"
             android:text="@{reserva.nombre}"
             />
 
@@ -50,7 +50,7 @@
             style="@style/TextAppearance.AppCompat.Body2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="30.000"
+            tools:text="@string/costo"
             android:text='@{reserva.costo}'
             />
 

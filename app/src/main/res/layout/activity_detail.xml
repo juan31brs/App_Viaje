@@ -40,13 +40,15 @@
             <!--exitUntil se colapsatodo menos elactionbar-->
             <!--contentScrim cuando colapso cambia de color y no queda la imagen-->
             <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsinBar"
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="@dimen/imgdetail"
                 app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
                 app:title="@{viajes.nombre}"
                 app:contentScrim="@color/colorPrimary">
 
                 <ImageView
+                    android:id="@+id/imgdetail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"

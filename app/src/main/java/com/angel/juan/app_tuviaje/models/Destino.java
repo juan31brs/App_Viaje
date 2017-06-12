@@ -3,7 +3,7 @@ package com.angel.juan.app_tuviaje.models;
 public class Destino {
 
 
-    private String nombre, imagen, direccion, telefono, descripcion, costo, fecha;
+    private String nombre, imagen, direccion, telefono, descripcion, costo, guia;
 
     public String getNombre() {
         return nombre;
@@ -53,12 +53,12 @@ public class Destino {
         this.costo = costo;
     }
 
-    public String getFecha() {
-        return fecha;
+    public String getGuia() {
+        return guia;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setGuia(String guia) {
+        this.guia = guia;
     }
 
 }

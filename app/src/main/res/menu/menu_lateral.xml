@@ -4,15 +4,13 @@
 
     <item android:id="@+id/action_add"
         android:icon="@drawable/ic_reserva"
-        android:title="Mis reservas"
-        app:showAsAction="ifRoom">
-
-    <menu>
-        <item android:id="@+id/reserva" android:title="Mis Reservas"/>
-    </menu>
+        android:title="@string/mis_reservas"
+        app:showAsAction="always"
+       >
 
 
     </item>
 
 
 </menu>
+

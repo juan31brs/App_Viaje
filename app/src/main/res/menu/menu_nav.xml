@@ -8,8 +8,8 @@
 
     <item
         android:id="@+id/nav_viaje"
-        android:icon="@drawable/ic_conocenos"
-        android:title="Nuestros Destinos"/>
+        android:icon="@drawable/ic_destinos"
+        android:title="@string/Nuestros_destinos"/>
 
 
     <item
@@ -20,5 +20,9 @@
         android:id="@+id/nav_viajes_realizados"
         android:title="@string/menu_realizados"
         android:icon="@drawable/ic_viajes_realizados" />
+
+    <item android:id="@+id/nav_salir"
+        android:title="@string/cerrar_sesion"
+        android:icon="@drawable/ic_salir"/>
 
 </menu>

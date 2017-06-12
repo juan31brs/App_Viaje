@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     //NavigationView.OnNavigationItemSelectedListener//LO COLOQUE DEL MENU
 
 
+
     ActivityMainBinding binding;
     //ViajeAdapter adapter;
     ActionBarDrawerToggle toggle;//Boton menu
@@ -80,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (toggle.onOptionsItemSelected(item))
             return true;
         switch (item.getItemId()){
-            case R.id.reserva:
+            case R.id.action_add:
                 Intent i = new Intent(this, ReservaActivity.class);
                 startActivity(i);
                 break;
@@ -145,6 +146,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 putFragment(new FragmentHome());
                 break;
             case R.id.nav_conocenos:
+                putFragment(new ConocenosFragment());
+                break;
+            case R.id.nav_salir:
                 putFragment(new ConocenosFragment());
                 break;
 

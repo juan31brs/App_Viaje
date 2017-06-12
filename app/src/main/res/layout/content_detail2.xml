@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/icon_call"
                 android:layout_toRightOf="@id/icon_call"
-                tools:text="3217927944"
+                tools:text="@string/cellphone"
                 android:text="@{destino.telefono}"
                 />
 
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/icon_place"
                 android:layout_toRightOf="@id/icon_place"
-                tools:text="Calle falsa 123"
+                tools:text="@string/direccion_false"
                 android:text="@{destino.direccion}"
                 />
 
@@ -83,7 +83,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/icon_star"
                 android:layout_toRightOf="@id/icon_star"
-                tools:text="30.000"
+                tools:text="@string/costttt"
                 android:text='@{destino.costo}'
                 />
 
@@ -127,7 +127,7 @@
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="@dimen/margin_boton"
                 android:text="@string/ubicacion"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
@@ -141,7 +141,7 @@
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="@dimen/margin_boton"
                 android:text="@string/reservar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@+id/button_ubicacion"

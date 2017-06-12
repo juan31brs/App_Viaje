@@ -1,76 +1,80 @@
 package com.angel.juan.app_tuviaje;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View.OnClickListener;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import com.angel.juan.app_tuviaje.db.DbHelper;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import com.angel.juan.app_tuviaje.databinding.ActivityLoginBinding;
+import com.angel.juan.app_tuviaje.models.SimpleResponse;
+import com.angel.juan.app_tuviaje.models.User;
+import com.angel.juan.app_tuviaje.net.UserService;
+import com.angel.juan.app_tuviaje.util.Data;
 
+public class LoginActivity extends AppCompatActivity {
 
-public class LoginActivity extends AppCompatActivity implements OnClickListener {
-
-
-    private DbHelper dbHelper;
-    private EditText name, pass;
-    private Session session;
-    private Button login, register;
+    ActivityLoginBinding binding;
+    UserService service;
+    SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-
-        dbHelper = new DbHelper(this);
-        session = new Session(this);
-        name = (EditText)findViewById(R.id.name);
-        pass = (EditText)findViewById(R.id.editText);
-        login = (Button)findViewById(R.id.button_login);
-        login.setOnClickListener(this);
-        register = (Button)findViewById(R.id.button_register);
-        register.setOnClickListener(this);
-
-        if (session.loggedin()){
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        preferences = getSharedPreferences("preference", MODE_PRIVATE);
+        boolean logged = preferences.getBoolean("logged",false);
+        if(logged){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
             finish();
+            return;
         }
 
 
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
+        binding.setHandler(this);
+
+        service = Data.retrofit.create(UserService.class);
     }
 
-    @Override
-    public void onClick(View view) {
-        switch(view.getId()){
-            case R.id.button_login:
-                login();
-                break;
-            case R.id.button_register:
-                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
-                break;
-            default:
-
-        }
+    public void goToRegister(){
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 
+    public void login(){
+        final String usuario =  binding.usuario.getText().toString();
+        String pass =  binding.password.getText().toString();
+        User user = new User(usuario, pass);
 
-    private void login(){
-        String nombre = name.getText().toString();
-        String pasword = pass.getText().toString();
+        final Call<SimpleResponse> request = service.login(user);
+        request.enqueue(new Callback<SimpleResponse>() {
+            @Override
+            public void onResponse(Call<SimpleResponse> call, Response<SimpleResponse> response) {
+                if(response.isSuccessful()){
+                    SimpleResponse res = response.body();
+                    if(res.isSuccess()){
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putBoolean("logged", true);
+                        editor.putString("usuario", usuario);
+                        editor.apply();
 
-        if(dbHelper.getUser(nombre, pasword)){
-            session.setLoggedin(true);
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-            Toast.makeText(getApplicationContext(), "Bienvenido", Toast.LENGTH_SHORT).show();
-            finish();
-        }else{
-            Toast.makeText(getApplicationContext(), "Ingresa Usuario y Contraseña", Toast.LENGTH_SHORT).show();
-        }
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(LoginActivity.this, res.getMsg(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<SimpleResponse> call, Throwable t) {
+                Toast.makeText(LoginActivity.this, "Error al conectarse", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-
-
 }
