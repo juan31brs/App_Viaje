@@ -17,8 +17,4 @@ public class Data {
 
     public static List<Destino> datade=new ArrayList<>();
 
-    public static Retrofit retrofit =  new Retrofit.Builder()
-            .baseUrl("http://192.168.1.194:3001")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build();
 }

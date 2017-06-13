@@ -14,7 +14,7 @@ import com.angel.juan.app_tuviaje.databinding.ActivityLoginBinding;
 import com.angel.juan.app_tuviaje.models.SimpleResponse;
 import com.angel.juan.app_tuviaje.models.User;
 import com.angel.juan.app_tuviaje.net.UserService;
-import com.angel.juan.app_tuviaje.util.Data;
+import com.angel.juan.app_tuviaje.util.DataService;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
         binding.setHandler(this);
 
-        service = Data.retrofit.create(UserService.class);
+        service = DataService.retrofit.create(UserService.class);
     }
 
     public void goToRegister(){

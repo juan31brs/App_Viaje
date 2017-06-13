@@ -1,54 +1,35 @@
 package com.angel.juan.app_tuviaje.models;
 
-/**
- * Created by darfe on 21/05/2017.
- */
 
 public class User {
 
     Long idusuario;
-    String nombre, email, password;
+    String nombre, usuario, password;
 
-    public User(String nombre, String email, String password) {
+    public User(String nombre, String usuario, String password) {
         this.nombre = nombre;
-        this.email = email;
+        this.usuario = usuario;
         this.password = password;
     }
 
-    public User(String email, String password) {
-        this.email = email;
+    public User(String usuario, String password) {
+        this.usuario = usuario;
         this.password = password;
     }
 
-    public Long getIdusuario() {
-        return idusuario;
-    }
+    public Long getIdusuario() {return idusuario;}
 
-    public void setIdusuario(Long idusuario) {
-        this.idusuario = idusuario;
-    }
+    public void setIdusuario(Long idusuario) {this.idusuario = idusuario;}
 
-    public String getNombre() {
-        return nombre;
-    }
+    public String getNombre() {return nombre;}
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+    public void setNombre(String nombre) {this.nombre = nombre;}
 
-    public String getEmail() {
-        return email;
-    }
+    public String getUsuario() {return usuario;}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public void setUsuario(String usuario) {this.usuario = usuario;}
 
-    public String getPassword() {
-        return password;
-    }
+    public String getPassword() {return password;}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    public void setPassword(String password) {this.password = password;}
 }

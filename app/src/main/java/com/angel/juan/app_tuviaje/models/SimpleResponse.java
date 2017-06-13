@@ -5,6 +5,7 @@ package com.angel.juan.app_tuviaje.models;
  */
 
 public class SimpleResponse {
+
     private boolean success;
     private String msg;
 

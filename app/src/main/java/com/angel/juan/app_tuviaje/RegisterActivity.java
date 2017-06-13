@@ -12,7 +12,7 @@ import com.angel.juan.app_tuviaje.databinding.ActivityRegisterBinding;
 import com.angel.juan.app_tuviaje.models.SimpleResponse;
 import com.angel.juan.app_tuviaje.models.User;
 import com.angel.juan.app_tuviaje.net.UserService;
-import com.angel.juan.app_tuviaje.util.Data;
+import com.angel.juan.app_tuviaje.util.DataService;
 
 public class RegisterActivity extends AppCompatActivity implements Callback<SimpleResponse> {
 
@@ -24,7 +24,7 @@ public class RegisterActivity extends AppCompatActivity implements Callback<Simp
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_register);
         binding.setHandler(this);
-        service = Data.retrofit.create(UserService.class);
+        service = DataService.retrofit.create(UserService.class);
     }
 
     public void register(){
